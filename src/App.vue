@@ -1,30 +1,114 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
+  <div id="nav"></div>
   <router-view />
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5d020;
+  background-image: linear-gradient(315deg, #f5d020 0%, #f53803 74%);
+}
+
+.btn {
+  width: auto;
+  margin: auto;
+  padding: 25px;
+  border-radius: 25px;
+  border: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn:hover {
+  background-color: grey;
+  color: black;
+}
+
+.container {
   text-align: center;
-  color: #2c3e50;
+  position: relative;
 }
 
-#nav {
-  padding: 30px;
+.containerDisplay {
+  text-align: center;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.username {
+  position: relative;
+  z-index: 101;
+  overflow: auto;
+  width: auto;
+  margin: auto;
+  margin-top: 250px;
+  padding: 15px 25px;
+  width: 50%;
+  border-radius: 50px;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+.generate {
+  margin-top: 15px;
+  position: relative;
+  z-index: 102;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  transition: all 0.5s;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.center {
+  width: auto;
+  margin: auto;
+  text-align: center;
+}
+
+.TopDisplay {
+  padding: 50px;
+  background-color: #eec0c6;
+  background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+  margin-top: 25px;
+  margin-left: 250px;
+  margin-right: 250px;
+  border-radius: 100px;
+  box-shadow: 10px 5px 5px black;
+}
+
+hr {
+  color: lightgray;
+}
+
+.img {
+  border-radius: 15px;
+}
+
+.usernameDisplay {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+p {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.clear {
+  margin-top: 50px;
 }
 </style>
