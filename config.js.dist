@@ -1,0 +1,6 @@
+export default {
+  baseUrl: "",
+  github: {
+    url: "https://api.github.com/users/",
+  }
+}
